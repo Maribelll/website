@@ -1,0 +1,70 @@
+.contact {
+  margin: 0 auto;
+  .container {
+    max-width: 1110px;
+    margin: 50px auto 80px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .getit {
+      max-width: 441px;
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 10px;
+      }
+      .photo {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        p {
+          margin-top: 5px;
+        }
+        .photoImage {
+          width: 60px;
+          height: 60px;
+          margin-right: 15px;
+        }
+      }
+      .social {
+        .insta {
+          margin-right: 19px;
+        }
+      }
+    }
+    .calendar {
+      width: 409px;
+      height: 591px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .contact {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      .getit {
+        .photo {
+          margin: 59px 0 70px;
+        }
+      }
+      .calendar {
+        margin-top: 40px;
+        width: 431px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .contact {
+    .container {
+      .calendar {
+        width: 292px;
+      }
+    }
+  }
+}

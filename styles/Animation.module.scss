@@ -1,0 +1,68 @@
+.rwWrapper {
+  position: relative;
+
+  .rwSentence {
+    .span {
+      font-weight: normal;
+    }
+    .rwWords {
+      display: inline;
+      text-indent: 10px;
+      span {
+        position: absolute;
+        opacity: 0;
+        overflow: hidden;
+        color: #4e93ce;
+        -webkit-animation: rotateWord 10s linear infinite 0s;
+        -moz-animation: rotateWord 10s linear infinite 0s;
+        -o-animation: rotateWord 10s linear infinite 0s;
+        -ms-animation: rotateWord 10s linear infinite 0s;
+        animation: rotateWord 10s linear infinite 0s;
+
+        &:nth-child(2) {
+          -webkit-animation-delay: 3s;
+          -moz-animation-delay: 3s;
+          -o-animation-delay: 3s;
+          -ms-animation-delay: 3s;
+          animation-delay: 3s;
+          color: #4e93ce;
+        }
+        &:nth-child(3) {
+          -webkit-animation-delay: 6s;
+          -moz-animation-delay: 6s;
+          -o-animation-delay: 6s;
+          -ms-animation-delay: 6s;
+          animation-delay: 6s;
+          color: #4e93ce;
+        }
+      }
+    }
+    @keyframes rotateWord {
+      0% {
+        opacity: 0;
+      }
+      2% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+      }
+      5% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+      }
+      17% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+      }
+      20% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}

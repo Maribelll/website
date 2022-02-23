@@ -1,0 +1,6 @@
+Sitemap: https://artellecreative.com/api/posts-sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

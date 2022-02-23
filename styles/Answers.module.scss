@@ -1,0 +1,66 @@
+.answersall {
+  background: rgba(46, 48, 61, 1);
+  color: white;
+  .horizontalclick {
+    width: 100%;
+    max-width: 748px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+  }
+  .horizontalclick [name="vkl"] {
+    display: none;
+  }
+  .horizontalclick > :not(input):not(label) {
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border-top-style: none;
+    transition: 0.5s;
+  }
+  .horizontalclick > label {
+    font-size: 24px;
+    overflow: hidden;
+    display: block;
+    padding: 15px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    &::after {
+      content: url(../public/icons/answerclose.svg); /* Выводим плюс */
+      float: right; /* Размещаем по правому краю */
+    }
+  }
+  .horizontalclick > :checked + label + * {
+    overflow: hidden;
+    height: 160px;
+    max-width: 85%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .horizontalclick > :checked + label {
+    cursor: default;
+    &::after {
+      content: url(../public/icons/answeropen.svg); /* Выводим плюс */
+      float: right; /* Размещаем по правому краю */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .answersall {
+    padding: 0 56px;
+  }
+}
+@media (max-width: 550px) {
+  .answersall {
+    padding: 0 16px;
+    .horizontalclick > :checked + label + * {
+      height: auto;
+    }
+    .horizontalclick > label {
+      font-size: 16px;
+    }
+  }
+}
